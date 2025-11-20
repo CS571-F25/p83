@@ -1,15 +1,22 @@
 import React from 'react';
-import { Container, Button } from 'react-bootstrap';
+import { HashRouter, Routes, Route } from 'react-router';
+import NavigationBar from './NavigationBar';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import Footer from './Footer';
 
 function App() {
   return (
-    <Container className="text-center mt-5">
-      <h1>Befriend Seniors</h1>
-      <p>
-        Connecting student volunteers with seniors for meaningful virtual conversations.
-      </p>
-      <Button variant="primary">Get Started</Button>
-    </Container>
+    <HashRouter>
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </HashRouter>
   );
 }
 
