@@ -1,20 +1,40 @@
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import logo from "./assets/logo.png"; // ← import your logo
 
-export default function NavigationBar() {
+function NavigationBar() {
   return (
-    <Navbar bg="light" expand="lg" className="mb-4">
+    <Navbar expand="lg" className="navbar-custom px-3">
       <Container>
-        <Navbar.Brand href="#/">Befriend Seniors</Navbar.Brand>
+        {/* Logo + Brand */}
+        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
+          <img
+            src={logo}
+            alt="Befriend Seniors Logo"
+            style={{
+              height: "40px",
+              width: "auto",
+              marginRight: "10px",
+            }}
+          />
+          <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
+            Befriend Seniors
+          </span>
+        </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#/">Home</Nav.Link>
-            <Nav.Link href="#/about">About</Nav.Link>
-            <Nav.Link href="#/contact">Contact</Nav.Link>
+          <Nav className="ms-auto">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/founder">Founder</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
+
+export default NavigationBar;

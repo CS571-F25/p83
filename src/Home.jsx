@@ -1,14 +1,40 @@
 import React from 'react';
-import { Container, Button } from 'react-bootstrap';
+import HeroSection from './HeroSection';
+import FeatureList from './FeatureList';
+import { Container, Row } from 'react-bootstrap';
+import TestimonialCard from './TestimonialCard';
+import SeniorMatchWidget from './SeniorMatchWidget';
 
 export default function Home() {
   return (
-    <Container className="text-center mt-5">
-      <h1>Befriend Seniors</h1>
-      <p className="mt-3">
-        Connecting student volunteers with seniors for meaningful virtual conversations.
-      </p>
-      <Button variant="primary">Get Started</Button>
-    </Container>
+    <>
+      <HeroSection />
+      <FeatureList />
+      <section aria-labelledby="testimonials-heading" className="py-5">
+        <Container>
+          <h2 id="testimonials-heading" className="text-center mb-4">
+            What People Say
+          </h2>
+          <Row>
+            <TestimonialCard
+              quote="Talking with students makes my week feel brighter."
+              name="Maria"
+              role="Senior participant"
+            />
+            <TestimonialCard
+              quote="I’ve learned so much from my conversations with older adults."
+              name="Ryan"
+              role="Student volunteer"
+            />
+            <TestimonialCard
+              quote="This program helped me feel less alone during the pandemic."
+              name="James"
+              role="Senior participant"
+            />
+          </Row>
+        </Container>
+      </section>
+      <SeniorMatchWidget />
+    </>
   );
 }
