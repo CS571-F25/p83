@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import founderImg from "./assets/founder.jpg"; // Add your photo to src/assets
+import founderImg from "./assets/founder.jpg"; 
 
 function Founder() {
   return (

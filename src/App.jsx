@@ -9,7 +9,6 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import Founder from "./Founder";
 
-
 import "./App.css";
 
 function App() {
@@ -19,6 +18,9 @@ function App() {
 
       <Container className="mt-4">
         <Routes>
+          <Route index element={<Home />} />
+
+          {/* routes */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

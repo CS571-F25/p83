@@ -1,4 +1,4 @@
-/* Global Theme Colors */
+
 :root {
   --primary-blue: #4a90e2;
   --light-blue: #add8e6;
@@ -7,14 +7,13 @@
   --dark-text: #333333;
 }
 
-/* Apply background + text defaults */
+
 body {
   background-color: var(--light-grey);
   color: var(--dark-text);
   font-family: Arial, sans-serif;
 }
 
-/* Section styling */
 section {
   background-color: white;
   padding: 30px 20px;
@@ -23,12 +22,12 @@ section {
   box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
 }
 
-/* Headings color */
+
 h1, h2, h3 {
   color: var(--primary-blue);
 }
 
-/* Button overrides */
+
 .btn-primary {
   background-color: var(--primary-blue) !important;
   border-color: var(--primary-blue) !important;
