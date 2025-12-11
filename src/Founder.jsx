@@ -24,7 +24,7 @@ function Founder() {
                 </h2>
 
                 <p style={{ fontSize: "1.05rem", lineHeight: "1.6" }}>
-                  Hi, I'm <strong>[Your Name]</strong>, the creator of Befriend Seniors. 
+                  Hi, I'm <strong>Aryan Shah</strong>, the creator of Befriend Seniors. 
                   I built this platform during the COVID-19 pandemic to connect student 
                   volunteers with seniors who were experiencing increased isolation. 
                   What started as a personal passion project quickly grew into a community 
